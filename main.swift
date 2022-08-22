@@ -1,1 +1,2 @@
-GooseGame().runThroughBoard()
+let myGooseGame = GooseGame()
+myGooseGame.runThroughBoard()

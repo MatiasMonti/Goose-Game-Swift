@@ -1,0 +1,31 @@
+import XCTest
+
+class GooseGameTest: XCTestCase {
+
+  let myGooseGame = GooseGame()
+
+  func printSpaceOneShould(){
+    let result = myGooseGame.showSpaceRule(1)
+    XCTAssertEqual(result, "Stay in space 1" )
+  }
+
+  func printSpaceTwoShould(){
+    let result = myGooseGame.showSpaceRule(2)
+    XCTAssertEqual(result, "Stay in space 2" )
+  }
+
+  func printMultipleOfSixShould(){
+    let result = myGooseGame.showSpaceRule(12)
+    XCTAssertEqual(result, "Move two spaces forward." )
+  }
+
+  func printNumberSixShould(){
+    let result = myGooseGame.showSpaceRule(6
+    XCTAssertEqual(result, "The Bridge: Go to space 12" )
+  }
+
+  func wrongSpaceBoardShould(){
+    let result = myGooseGame.showSpaceRule(123)
+    XCTAssertEqual(result, "There is no Rule for that Board Space" )
+  }
+}
